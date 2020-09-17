@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Coins/MonedaP.png" type="Texture" id=1]
+
+[sub_resource type="Animation" id=1]
+resource_name = "spin"
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4, 4 ]
+}
+
+[node name="contSILVER" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+margin_left = 68.256
+margin_top = 10.7773
+margin_right = 108.256
+margin_bottom = 50.7773
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 31.1343
+margin_top = 6.58611
+margin_right = 31.1343
+margin_bottom = 6.58611
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control/VBoxContainer"]
+margin_right = 40.0
+text = "1"
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/Control/VBoxContainer"]
+position = Vector2( 26.3509, 24.1979 )
+texture = ExtResource( 1 )
+hframes = 5
+frame = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control/VBoxContainer"]
+autoplay = "spin"
+anims/spin = SubResource( 1 )

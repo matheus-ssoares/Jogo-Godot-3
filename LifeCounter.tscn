@@ -1,0 +1,16 @@
+[gd_scene format=2]
+
+[node name="LifeCounter" type="Node"]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="UI"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/Control"]
+visible = false
+margin_left = 39.0
+margin_right = 79.0
+margin_bottom = 40.0

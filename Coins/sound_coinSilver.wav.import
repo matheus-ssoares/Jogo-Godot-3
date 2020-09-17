@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sound_coinSilver.wav-e92393f32d5f44588c46fda4941d04bf.sample"
+
+[deps]
+
+source_file="res://Coins/sound_coinSilver.wav"
+dest_files=[ "res://.import/sound_coinSilver.wav-e92393f32d5f44588c46fda4941d04bf.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

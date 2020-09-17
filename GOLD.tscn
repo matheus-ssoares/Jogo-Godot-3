@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://GUI/Comfortaa-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Coins/MonedaD.png" type="Texture" id=2]
+
+[sub_resource type="DynamicFont" id=2]
+size = 22
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=1]
+resource_name = "spin"
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+
+[node name="GOLD" type="Node"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+margin_left = 229.0
+margin_top = 25.0
+margin_right = 269.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 2 )
+text = "1"
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/Control"]
+position = Vector2( 206, 37 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control"]
+autoplay = "spin"
+anims/spin = SubResource( 1 )

@@ -1,0 +1,109 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "StaticBody2D",
+"class": "Batcena2",
+"language": "GDScript",
+"path": "res://Bat.gd"
+}, {
+"base": "Area2D",
+"class": "Coin",
+"language": "GDScript",
+"path": "res://Coin.gd"
+}, {
+"base": "Area2D",
+"class": "CoinSilver",
+"language": "GDScript",
+"path": "res://CoinSilver.gd"
+}, {
+"base": "StaticBody2D",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://enemy.gd"
+}, {
+"base": "StaticBody2D",
+"class": "Enemy2",
+"language": "GDScript",
+"path": "res://Enemie2.gd"
+}, {
+"base": "StaticBody2D",
+"class": "Enemy2cena2",
+"language": "GDScript",
+"path": "res://Enemie.gd"
+}, {
+"base": "StaticBody2D",
+"class": "Enemy3",
+"language": "GDScript",
+"path": "res://Enemie3.gd"
+}, {
+"base": "StaticBody2D",
+"class": "Enemy4",
+"language": "GDScript",
+"path": "res://Enemie4.gd"
+}, {
+"base": "StaticBody2D",
+"class": "Enemy5",
+"language": "GDScript",
+"path": "res://Enemie5.gd"
+}, {
+"base": "StaticBody2D",
+"class": "Enemy6",
+"language": "GDScript",
+"path": "res://Enemie6.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Player.gd"
+}, {
+"base": "Area2D",
+"class": "RecebeDano",
+"language": "GDScript",
+"path": "res://dano.gd"
+}, {
+"base": "Label",
+"class": "ScoreValue",
+"language": "GDScript",
+"path": "res://Value.gd"
+} ]
+_global_script_class_icons={
+"Batcena2": "",
+"Coin": "",
+"CoinSilver": "",
+"Enemy": "",
+"Enemy2": "",
+"Enemy2cena2": "",
+"Enemy3": "",
+"Enemy4": "",
+"Enemy5": "",
+"Enemy6": "",
+"Player": "",
+"RecebeDano": "",
+"ScoreValue": ""
+}
+
+[application]
+
+config/name="Plataforma"
+run/main_scene="res://Menu.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Mundo="*res://World.gd"
+
+[display]
+
+window/size/resizable=false
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
