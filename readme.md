@@ -1,7 +1,6 @@
 <h1 align="center">
 
-<br>
-Plataforma
+<br> Plataforma
 </h1>
 
 # 📋 Índice
